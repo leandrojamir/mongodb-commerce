@@ -1,7 +1,7 @@
 // 1 - Retorne a quantidade de documentos inseridos na coleção produtos
 // Para isso, escreva a query no arquivo desafio1.js
 
-db.produtos.countDocuments({});
+db.produtos.countDocuments({}); // find().count() também era usado antes da versão 4
 
 // root@cac03e7a617f:/app# ./scripts/evaluate.sh desafio1
 // { "ok" : 1 }

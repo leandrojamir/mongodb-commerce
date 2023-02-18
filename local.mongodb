@@ -1,6 +1,22 @@
-use('commerce');
-db.produtos
-  .updateMany(
-    { nome: { $in: ["Big Mac", "Quarteirão com Queijo"] } },
-    { $push: { ingredientes: "tres bacon" } }, 
-  );
+// possivelmente arquivo para playground local esta quebrando o desafio1 na hora de contar o total de documentos, passando agora ok
+// root@cac03e7a617f:/app# ./scripts/evaluate.sh desafio1 
+// { "ok" : 1 }
+// produtos.bson
+// 2023-02-18T01:14:39.185+0000    checking for collection data in /app/assets/produtos/produtos.bson
+// 2023-02-18T01:14:39.186+0000    reading metadata for commerce.produtos from /app/assets/produtos/produtos.metadata.json
+// 2023-02-18T01:14:39.465+0000    restoring commerce.produtos from /app/assets/produtos/produtos.bson
+// 2023-02-18T01:14:39.506+0000    finished restoring commerce.produtos (5 documents, 0 failures)
+// 2023-02-18T01:14:39.506+0000    no indexes to restore for collection commerce.produtos
+// 2023-02-18T01:14:39.506+0000    5 document(s) restored successfully. 0 document(s) failed to restore.
+
+// ======================= RESULTS =======================
+// desafio1: passed 
+// ======================= RESULTS =======================
+// { "ok" : 1 }
+// produtos.bson
+// 2023-02-18T01:14:40.120+0000    checking for collection data in /app/assets/produtos/produtos.bson
+// 2023-02-18T01:14:40.121+0000    reading metadata for commerce.produtos from /app/assets/produtos/produtos.metadata.json
+// 2023-02-18T01:14:40.442+0000    restoring commerce.produtos from /app/assets/produtos/produtos.bson
+// 2023-02-18T01:14:40.498+0000    finished restoring commerce.produtos (5 documents, 0 failures)
+// 2023-02-18T01:14:40.498+0000    no indexes to restore for collection commerce.produtos
+// 2023-02-18T01:14:40.498+0000    5 document(s) restored successfully. 0 document(s) failed to restore.

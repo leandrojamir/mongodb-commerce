@@ -1,3 +1,5 @@
-use('commerce')
+use('commerce');
 db.produtos
-  .countDocuments({ tags: { $size: 1 } });
+  .updateMany({ }, { $set: { criadoPor: "Ronald McDonald" } });
+db.produtos
+  .updateMany({ }, { $unset: { criadoPor: "testteste" } });

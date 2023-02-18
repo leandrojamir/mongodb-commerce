@@ -1,6 +1,8 @@
 use('commerce')
 db.produtos
+  .updateMany({ }, { $set: { vendasPorDia: [0, 0, 0, 0, 0, 0, 0] } });
+db.produtos
   .updateMany(
-    { nome: "Quarteirão com Queijo" },
-    { $pop: { ingredientes: -1 } },  
+    { nome: "Big Mac" },
+    { $inc: { "vendasPorDia.3": 9999 } },
   );

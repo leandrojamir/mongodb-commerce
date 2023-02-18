@@ -1,6 +1,3 @@
 use('commerce');
 db.produtos
-  .updateMany(
-    { tags: { $elemMatch: { $eq: "bovino" } } },
-    { $inc: { avaliacao: 5 } },
-  );
+  .updateOne({ nome: "Big Mac" }, { $set: { ultimaModificacao: Date() } });

@@ -1,3 +1,0 @@
-use('commerce');
-db.produtos
-  .updateOne({ }, { $rename: { descricao: "testeteste" } });

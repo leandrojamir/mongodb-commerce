@@ -1,7 +1,6 @@
 use('commerce')
 db.produtos
-  .updateMany({ },
-    { $push: { valoresNutricionais: {
-      $each: [],
-      $sort: { percentual: -1 },
-    } } });
+  .updateMany(
+    { valoresNutricionais: { $elemMatch: { tipo: "sódio" } } },
+    { $push: { tags: "teste" } },
+  );

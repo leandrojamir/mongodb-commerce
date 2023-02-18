@@ -1,3 +1,6 @@
 use('commerce');
-db.resumoProdutos
-  .insertOne({ franquia: "McDonalds", totalProdutos: db.produtos.countDocuments({ }) });
+db.produtos
+  .updateMany(
+    { nome: { $in: ["Big Mac", "Quarteirão com Queijo"] } },
+    { $push: { ingredientes: "tres bacon" } }, 
+  );

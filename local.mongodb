@@ -1,6 +1,3 @@
 use('commerce');
 db.produtos
-  .find(
-    { $expr: { $lt: ["$vendidos", "$curtidas"] } },
-    { _id: 0, nome: true },
-  );
+  .updateOne({ }, { $rename: { descricao: "testeteste" } });

@@ -1,5 +1,6 @@
 use('commerce');
 db.produtos
-  .updateMany({ }, { $set: { criadoPor: "Ronald McDonald" } });
-db.produtos
-  .updateMany({ }, { $unset: { criadoPor: "testteste" } });
+  .find(
+    { $expr: { $lt: ["$vendidos", "$curtidas"] } },
+    { _id: 0, nome: true },
+  );
